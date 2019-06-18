@@ -4,7 +4,6 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
 var snake = null;
 
 
@@ -23,6 +22,7 @@ function init() {
     snake.style.top = '0px';
     draw();
 }
+
 function getKeyAndMove(e) {
     var key_code = e.which || e.keyCode;
     switch (key_code) {
