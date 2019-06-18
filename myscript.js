@@ -1,27 +1,11 @@
 
-
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-canvas.tabIndex = 1000;
 var snake = null;
-
-
-function draw() {
-var hungry = document.querySelector("#snake > .snake");
-ctx.drawImage(hungry, 0, 0, 170, 170);
-var food = document.querySelector("#food > .mouse");
-ctx.drawImage(food, 900, 500, 120, 120);
-}
-
 
 function init() {
     snake = document.getElementById("snake");
     snake.style.position = 'relative';
     snake.style.left = '0px';
     snake.style.top = '0px';
-    draw();
 }
 
 function getKeyAndMove(e) {
