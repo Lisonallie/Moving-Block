@@ -11,7 +11,7 @@ function draw() {
 var hungry = document.querySelector("#snake > .snake");
 ctx.drawImage(hungry, 0, 0, 170, 170);
 var food = document.querySelector("#food > .mouse");
-ctx.drawImage(food, 500, 500, 120, 120);
+ctx.drawImage(food, 900, 500, 120, 120);
 }
 
 
