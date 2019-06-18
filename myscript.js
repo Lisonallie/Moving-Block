@@ -1,5 +1,6 @@
 
 var snake = null;
+var food = null;
 var slither = document.querySelector("#snake > .snake");
 var mouse = document.querySelector("#food > .mouse");
 var body = document.getElementById("grass");
@@ -11,6 +12,8 @@ function init() {
     snake.style.position = 'relative';
     snake.style.left = '0px';
     snake.style.top = '0px';
+    food = document.getElementById("food");
+    food.style.position = 'relative';
 }
 
 
@@ -54,7 +57,7 @@ var update = () => {
     if (
         mouse.x === slither.x || mouse.y === slither.y || mouse.y === slither.y && mouse.x === slither.x
     ) {
-        mouse.x = Math.floor((Math.random() * 30) + 1);
-        mouse.y = Math.floor((Math.random() * 30) + 1);
+        mouse.x = Math.floor((Math.random() * 30) + 1) + 'px';
+        mouse.y = Math.floor((Math.random() * 30) + 1) + 'px';
     }
 };
