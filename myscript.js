@@ -1,5 +1,8 @@
 
 var snake = null;
+var slither = document.querySelector("#snake > .snake");
+var mouse = document.querySelector("#food > .mouse");
+var body = document.getElementById("grass");
 
 function init() {
     snake = document.getElementById("snake");
@@ -7,6 +10,7 @@ function init() {
     snake.style.left = '0px';
     snake.style.top = '0px';
 }
+
 
 function getKeyAndMove(e) {
     var key_code = e.which || e.keyCode;
@@ -25,6 +29,7 @@ function getKeyAndMove(e) {
             break;
     }
 }
+
 function moveLeft() {
     snake.style.left = parseInt(snake.style.left) - 7 + 'px';
 }
@@ -38,3 +43,14 @@ function moveDown() {
     snake.style.top = parseInt(snake.style.top) + 7 + 'px';
 }
 window.onload = init;
+
+var update = () => {
+    x = body.width / 2;
+    y = body.height / 2;
+    if (
+        mouse.x === slither.x || mouse.y === slither.y || mouse.y === slither.y && mouse.x === slither.x
+    ) {
+        mouse.x = Math.floor((Math.random() * 30) + 1);
+        mouse.y = Math.floor((Math.random() * 30) + 1);
+    }
+};
