@@ -1,16 +1,19 @@
 
-canvas.onload = () => {
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    var hungry = document.querySelector("#snake > .snake");
-    ctx.drawImage(hungry, 0, 0, 170, 170);
-    var food = document.querySelector("#food > .mouse");
-    ctx.drawImage(food, 20, 20, 120, 120);
-};
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var snake = null;
+
+
+function draw() {
+var hungry = document.querySelector("#snake > .snake");
+ctx.drawImage(hungry, 0, 0, 170, 170);
+var food = document.querySelector("#food > .mouse");
+ctx.drawImage(food, 500, 500, 120, 120);
+}
 
 
 function init() {
@@ -18,6 +21,7 @@ function init() {
     snake.style.position = 'relative';
     snake.style.left = '0px';
     snake.style.top = '0px';
+    draw();
 }
 function getKeyAndMove(e) {
     var key_code = e.which || e.keyCode;
