@@ -1,4 +1,20 @@
+const canvas = document.getElementById("canvas");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+canvas.style.backgroundColor = "gray";
+//show bigfish and smallfish on canvas
+window.onload = () => {
+var ctx = canvas.getContext("2d");
+var block = document.getElementById("bigfish");
+ctx.drawImage(block, 0, 0, 120, 80);
+var food = document.getElementById("smallfish");
+ctx.drawImage(food, 500, 500, 80, 60);
+};
+
 var snake= null;
+
+
 			function init(){
 				snake=document.getElementById("snake");				
 				snake.style.position='relative';
