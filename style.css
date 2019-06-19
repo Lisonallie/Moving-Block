@@ -7,6 +7,9 @@ body {
     max-height: 95vh;
     overflow: hidden;
 }
+#food {
+    display: inline;
+}
 .snake {
     width: 10%;
 }
@@ -20,4 +23,11 @@ body {
     background-image: url(img/grassbg.png);
     margin-top: 5vh;
     margin-left: 5vw;
+}
+#squeek {
+    width: 70px;
+    position: absolute;
+    top: -35px;
+    transition: 3s ease;
+    display: none;
 }

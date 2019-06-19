@@ -50,7 +50,7 @@ function moveDown() {
 }
 window.onload = init;
 
-function collisionCheck(slither, mouse) {
+function collisionCheck(slither, mouse, squeek) {
     var snakeBounds = slither.getBoundingClientRect();
     var mouseBounds = mouse.getBoundingClientRect();
 
