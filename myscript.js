@@ -59,8 +59,8 @@ function collisionCheck(slither, mouse) {
         snakeBounds.top > (mouseBounds.height + mouseBounds.top) ||
         (snakeBounds.left + snakeBounds.width) < mouseBounds.left ||
         snakeBounds.left > (mouseBounds.width + mouseBounds.left))) {
- 
-        food.style.left = Math.floor((Math.random() * window.innerWidth) - mouse.width) + 'px';  
-        food.style.top = Math.floor((Math.random() * window.innerHeight) - mouse.height) + 'px';
+            console.log(window.innerWidth)
+        food.style.left = Math.floor(Math.random() * window.innerWidth - mouse.width) + 'px';  
+        food.style.top = Math.floor(Math.random() * window.innerHeight - mouse.height) + 'px';
     }
 }
