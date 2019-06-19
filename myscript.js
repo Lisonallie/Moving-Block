@@ -3,6 +3,7 @@ var snake = null;
 var food = null;
 var slither = document.querySelector("#snake > .snake");
 var mouse = document.querySelector("#food > .mouse");
+var container = document.getElementById("container");
 
 function init() {
     snake = document.getElementById("snake");
@@ -10,7 +11,9 @@ function init() {
     snake.style.left = '0px';
     snake.style.top = '0px';
     food = document.getElementById("food");
-    food.style.position = 'relative';
+    food.style.position = 'absolute';
+    food.style.left = '50%';
+    food.style.top = '50%';
 }
 
 
@@ -50,16 +53,13 @@ window.onload = init;
 function collisionCheck(slither, mouse) {
     var snakeBounds = slither.getBoundingClientRect();
     var mouseBounds = mouse.getBoundingClientRect();
-    var distance = Math.sqrt(
-        Math.pow(snakeBounds.x - mouseBounds.x, 2) +
-        Math.pow(snakeBounds.y - mouseBounds.y, 2));
 
     if (!((snakeBounds.top + snakeBounds.height) < mouseBounds.top ||
         snakeBounds.top > (mouseBounds.height + mouseBounds.top) ||
         (snakeBounds.left + snakeBounds.width) < mouseBounds.left ||
         snakeBounds.left > (mouseBounds.width + mouseBounds.left))) {
-            console.log(window.innerWidth)
-        food.style.left = Math.floor(Math.random() * window.innerWidth - 50) + 'px';  
-        food.style.top = Math.floor(Math.random() * window.innerHeight - 50) + 'px';
+            
+        food.style.left = Math.floor(Math.random() * 1100) + 'px';  
+        food.style.top = Math.floor(Math.random() * 500) + 'px';
     }
 }
