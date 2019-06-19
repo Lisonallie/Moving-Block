@@ -3,7 +3,6 @@ var snake = null;
 var food = null;
 var slither = document.querySelector("#snake > .snake");
 var mouse = document.querySelector("#food > .mouse");
-var body = document.getElementById("grass");
 
 function init() {
     snake = document.getElementById("snake");
@@ -60,7 +59,7 @@ function collisionCheck(slither, mouse) {
         (snakeBounds.left + snakeBounds.width) < mouseBounds.left ||
         snakeBounds.left > (mouseBounds.width + mouseBounds.left))) {
             console.log(window.innerWidth)
-        food.style.left = Math.floor(Math.random() * window.innerWidth - mouse.width) + 'px';  
-        food.style.top = Math.floor(Math.random() * window.innerHeight - mouse.height) + 'px';
+        food.style.left = Math.floor(Math.random() * window.innerWidth - 50) + 'px';  
+        food.style.top = Math.floor(Math.random() * window.innerHeight - 50) + 'px';
     }
 }
