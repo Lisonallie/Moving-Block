@@ -4,7 +4,9 @@ var food = null;
 var slither = document.querySelector("#snake > .snake");
 var mouse = document.querySelector("#food > .mouse");
 var container = document.getElementById("container");
-var scoreBoard = document.getElementById("scoreboard");
+let score = 0;
+let score_span = document.getElementById("score");
+let scoreBoard = document.getElementById("scoreboard");
 
 function init() {
     snake = document.getElementById("snake");
@@ -51,9 +53,10 @@ function moveDown() {
 }
 window.onload = init;
 
-function collisionCheck(slither, mouse, squeek) {
+function collisionCheck(slither, mouse) {
     var snakeBounds = slither.getBoundingClientRect();
     var mouseBounds = mouse.getBoundingClientRect();
+    score_span.innerHTML = score;
 
     if (!((snakeBounds.top + snakeBounds.height) < mouseBounds.top ||
         snakeBounds.top > (mouseBounds.height + mouseBounds.top) ||
@@ -62,5 +65,6 @@ function collisionCheck(slither, mouse, squeek) {
             
         food.style.left = Math.floor(Math.random() * 1100) + 'px';  
         food.style.top = Math.floor(Math.random() * 500) + 'px';
+        score++;
     }
 }
