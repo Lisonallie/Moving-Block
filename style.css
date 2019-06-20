@@ -7,6 +7,15 @@ body {
     max-height: 95vh;
     overflow: hidden;
 }
+.github {
+    width: 50px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.github:hover {
+    cursor: pointer;
+}
 #scoreboard {
     border: 3px solid white;
     width: 118px;
