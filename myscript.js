@@ -4,6 +4,7 @@ var food = null;
 var slither = document.querySelector("#snake > .snake");
 var mouse = document.querySelector("#food > .mouse");
 var container = document.getElementById("container");
+var scoreBoard = document.getElementById("scoreboard");
 
 function init() {
     snake = document.getElementById("snake");

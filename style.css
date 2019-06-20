@@ -7,6 +7,23 @@ body {
     max-height: 95vh;
     overflow: hidden;
 }
+#scoreboard {
+    border: 3px solid white;
+    width: 30px;
+    border-radius: 5px;
+    text-align: center;
+    height: 25px;
+    position: absolute;
+    top: 89.5%;
+    left: 5.5%;
+}
+#score {
+    font-size: 38px;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    position: relative;
+    top: -16.5px;
+}
 #snake {
     transition: all 0.1s ease-out;
 }
